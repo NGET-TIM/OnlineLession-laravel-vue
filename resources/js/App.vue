@@ -1,24 +1,39 @@
 <template>
-    
-    <h1 >Click Me {{ count }}</h1>
-
+    <div>
+        <Menu/>
+        <h1 @click="clickMe()">Click Me</h1>
+    </div>
 </template>
 
 <script>
+    import Menu from './components/Menu'
     export default {
-
+        components: {
+            Menu,
+        },
+        
         data() {
-            return { 
+            return {
                 count: 0,
-                user: {},
+                users: [
+                    { id: 0, name: 'Mr Jonh' },
+                    { id: 1, name: 'Nget Tim' },
+                    { id: 2, name: 'Mr Leap'}
+                ]
             }
         },
-        methods() {
-            
+        methods: {
+            clickMe(m) {
+                
+            },
+
         },
         mounted() {
-
-        }
+           
+        },
+        created() {
+           
+        },
     }
 </script>
 
